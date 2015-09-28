@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "vagrant_config/scripts/centos_7_x.sh"
   
   #config.vm.synced_folder ".", "/var/www/symfony", type: "nfs"
-  config.vm.synced_folder ".", "/var/www/symfony", :owner => 48, :group => 48
+  config.vm.synced_folder ".", "/var/www/symfony", type: "smb", :owner => 48, :group => 48
 
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "vagrant_config/manifests"
