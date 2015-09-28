@@ -40,12 +40,10 @@ sonata_page:
     ignore_uri_patterns:
         - ^/admin\/   # ignore admin route, ie route containing 'admin'
 
-    page_defaults:
-        homepage: {decorate: false} # disable decoration for homepage, key - is a page route
-
     default_template: default # template key from templates section, used as default for pages
     templates:
-        default: {path: 'SonataPageBundle::layout.html.twig', name: default }
+        default: {path: 'SonataPageBundle::layout.html.twig', name: Default }
+
     # Assets loaded by default in template
      # Generates a snapshot when a page is saved (from the admin)
       # manage the http errors
